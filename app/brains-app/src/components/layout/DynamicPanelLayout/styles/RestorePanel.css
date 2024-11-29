@@ -1,0 +1,25 @@
+
+.restore-panel-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-2);
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    color: var(--color-text);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin: var(--spacing-2);
+  }
+  
+  .restore-panel-btn:hover {
+    background: var(--color-background);
+  }
+  
+  .restore-panel-btn span {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+  }
+  
+  

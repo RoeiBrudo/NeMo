@@ -1,0 +1,110 @@
+/* src/pages/ExperimentsList/ExperimentsList.css */
+
+.experiments-page {
+  min-height: 100vh;
+  background-color: var(--color-background);
+  padding-top: calc(var(--spacing-6) + var(--spacing-4));
+  padding-bottom: var(--spacing-4);
+}
+
+.experiments-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.experiments-header {
+  text-align: center;
+  margin-bottom: var(--spacing-6);
+}
+
+.experiments-header h1 {
+  color: var(--color-primary);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-3);
+}
+
+.experiments-header p {
+  color: var(--color-text);
+  font-size: var(--font-size-h3);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.experiments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-4);
+}
+
+.experiment-card {
+  height: 100%;
+  transition: transform var(--transition);
+}
+
+.experiment-card:hover {
+  transform: translateY(-2px);
+}
+
+.experiment-card-content {
+  padding: var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.experiment-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.experiment-title {
+  font-size: var(--font-size-h2);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.chevron-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-secondary);
+}
+
+.experiment-description {
+  color: var(--color-text);
+  margin: 0;
+}
+
+.experiment-button {
+  width: 100%;
+  margin-top: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .experiments-page {
+    padding-top: calc(var(--spacing-4) + var(--spacing-4));
+  }
+
+  .experiments-header h1 {
+    font-size: 2rem;
+  }
+
+  .experiments-header p {
+    font-size: var(--font-size-body);
+  }
+
+  .experiments-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-3);
+  }
+
+  .experiment-card-content {
+    padding: var(--spacing-3);
+  }
+}

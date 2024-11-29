@@ -1,0 +1,28 @@
+/* src/styles/colors.css */
+
+:root {
+  /* Base theme colors (existing) */
+  --color-primary: #2B3A67;    /* Deep navy blue */
+  --color-secondary: #496A81;  /* Muted blue-gray */
+  --color-accent: #66999B;     /* Sage blue */
+  --color-background: #F8F9FA;
+  --color-text: #2C3E50;
+  --color-border: #E2E8F0;
+
+  /* Brain state colors - Solid 
+     Using colors that complement the primary/secondary palette */
+  --color-learning: #3b82f6;    /* Bright blue - energetic but professional */
+  --color-reading: #8b5cf6;     /* Purple - distinct but harmonious */
+  
+  /* Brain state colors - Transparent */
+  --color-learning-transparent: rgba(59, 130, 256, 0.25);
+  --color-reading-transparent: rgba(139, 92, 246, 0.25);
+  
+  /* Status indicators */
+  --color-resting: #ef4444;      /* Clean red, matches the professional tone */
+  --color-not-resting: #94a3b8;  /* Neutral slate, works with existing grays */
+  
+  /* Hover and interaction states */
+  --color-learning-hover: #2563eb;
+  --color-reading-hover: #7c3aed;
+}

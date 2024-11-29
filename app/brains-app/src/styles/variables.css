@@ -1,0 +1,49 @@
+/* src/styles/variables.css */
+:root {  
+    /* Typography */
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    --font-size-h1: 24px;
+    --font-size-h2: 20px;
+    --font-size-h3: 16px;
+    --font-size-body: 14px;
+    --line-height: 1.5;
+  
+    /* Spacing */
+    --spacing-1: 8px;
+    --spacing-2: 16px;
+    --spacing-3: 24px;
+    --spacing-4: 32px;
+    --spacing-5: 48px;
+    --spacing-6: 64px;
+  
+    /* Components */
+    --border-radius: 8px;
+    --transition: 0.2s ease;
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Reset and base styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-body);
+    line-height: var(--line-height);
+    color: var(--color-text);
+    background-color: var(--color-background);
+  }
+  
+  /* Global link styles */
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: var(--transition);
+  }
+  
+  a:hover {
+    color: var(--color-secondary);
+  }

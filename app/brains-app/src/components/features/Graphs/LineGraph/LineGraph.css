@@ -1,0 +1,107 @@
+.line-graph-container {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: var(--border-radius);
+    padding: var(--spacing-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+  }
+  
+  .graph-title {
+    text-align: center;
+    color: var(--color-primary);
+    margin: 0;
+  }
+  
+  .graph-wrapper {
+    flex: 1;
+    min-height: 400px;
+  }
+  
+  /* Custom Legend Styles */
+  .custom-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-2);
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-2) var(--spacing-3);
+    border: none;
+    border-radius: var(--border-radius);
+    background: transparent;
+    cursor: pointer;
+    transition: all var(--transition);
+  }
+  
+  .legend-item:hover {
+    background: var(--color-background);
+  }
+  
+  .legend-item.inactive {
+    opacity: 0.5;
+  }
+  
+  .legend-item.hovered {
+    background: var(--color-background);
+  }
+  
+  .legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  
+  .legend-label {
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+  }
+  
+  /* Custom Tooltip Styles */
+  .custom-tooltip {
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-3);
+    box-shadow: var(--shadow);
+  }
+  
+  .tooltip-title {
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+    margin-bottom: var(--spacing-2);
+    font-weight: 500;
+  }
+  
+  .tooltip-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-1);
+  }
+  
+  .tooltip-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-3);
+    padding-left: var(--spacing-2);
+    border-left: 2px solid;
+  }
+  
+  .tooltip-label {
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+  }
+  
+  .tooltip-value {
+    font-size: var(--font-size-body);
+    font-weight: 500;
+    color: var(--color-text);
+  }

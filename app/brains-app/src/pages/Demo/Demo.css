@@ -1,0 +1,146 @@
+/* pages/Demo/Demo.css */
+.demo-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.demo-header {
+  background: white;
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--spacing-4) 0;
+  flex-shrink: 0;
+}
+
+.demo-header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-4);
+  text-align: center;
+}
+
+.demo-header h1 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-2);
+}
+
+.demo-header p {
+  color: var(--color-text);
+  opacity: 0.8;
+  margin-bottom: var(--spacing-4);
+}
+
+.demo-actions {
+  display: flex;
+  gap: var(--spacing-2);
+  justify-content: center;
+}
+
+.demo-main {
+  flex: 1;
+  min-height: 0;
+  padding: var(--spacing-4);
+}
+
+.demo-layout {
+  height: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+}
+
+/* Component showcase styles */
+.demo-section {
+  min-width: 0; /* Enable text truncation */
+}
+
+.demo-section h4 {
+  margin: 0;
+  color: var(--color-primary);
+}
+
+.button-grid {
+  display: flex;
+  gap: var(--spacing-2);
+  flex-wrap: wrap;
+}
+
+.container-content {
+  padding: var(--spacing-3);
+  background: var(--color-background);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--border-radius);
+}
+
+/* Properties and Statistics */
+.properties-list,
+.statistics-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.property-item,
+.statistic-item {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-2);
+  background: var(--color-background);
+  border-radius: var(--border-radius);
+  min-width: 0; /* Enable proper flex behavior */
+  gap: var(--spacing-2); /* Space between label and value */
+}
+
+.property-label,
+.statistic-label {
+  flex-shrink: 0; /* Prevent label from shrinking */
+  color: var(--color-text);
+  opacity: 0.7;
+}
+
+.property-value,
+.statistic-value {
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Card styles */
+.demo-card {
+  min-height: 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content {
+  min-height: 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .demo-header {
+    padding: var(--spacing-3) 0;
+  }
+
+  .demo-header-content {
+    padding: 0 var(--spacing-3);
+  }
+
+  .demo-actions {
+    flex-direction: column;
+  }
+
+  .demo-main {
+    padding: var(--spacing-2);
+  }
+
+  .button-grid {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+

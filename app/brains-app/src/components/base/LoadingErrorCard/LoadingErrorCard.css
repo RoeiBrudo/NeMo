@@ -1,0 +1,52 @@
+.loading-error-card {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.loading-error-card.loading-state {
+  padding: var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.loading-error-card.error-state {
+  padding: var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-3);
+  background-color: #fee2e2;
+  border: 1px solid #fecaca;
+}
+
+.loading-message {
+  color: var(--color-text);
+  font-size: var(--font-size-body);
+}
+
+.error-icon {
+  font-size: 2rem;
+}
+
+.error-message {
+  color: #dc2626;
+  margin: 0;
+}
+
+.retry-button {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: var(--font-size-body);
+  transition: var(--transition);
+}
+
+.retry-button:hover {
+  background-color: var(--color-secondary);
+}

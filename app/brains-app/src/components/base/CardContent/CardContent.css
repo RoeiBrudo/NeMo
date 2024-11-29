@@ -1,0 +1,136 @@
+/* src/components/base/CardContent/CardContent.css */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+  height: 100%;
+}
+
+.card-content-header {
+  flex-shrink: 0;
+  padding: var(--spacing-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.card-content-body {
+  flex: 1;
+  overflow: auto;
+  padding: var(--spacing-3);
+  min-height: 0;
+  min-width: 0;
+}
+
+
+
+  .content-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-2) var(--spacing-3);
+    background: var(--color-background);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .content-header:hover:not(:disabled) {
+    background: var(--color-border);
+  }
+  
+  .content-header.expanded {
+    background: var(--color-background);
+    border-bottom: 1px solid var(--color-border);
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+  }
+  
+  .content-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-secondary);
+  }
+  
+  .content-title {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+  }  
+  .content-badge {
+    background: var(--color-accent);
+    color: white;
+    padding: 2px var(--spacing-1);
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  
+  .expand-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--color-secondary);
+    transition: transform var(--transition);
+  }
+  
+  .expand-icon.expanded {
+    transform: rotate(180deg);
+  }
+  
+  .content-body {
+    height: 0;
+    overflow: hidden;
+    transition: height var(--transition);
+  }
+  
+  .content-body.expanded {
+    height: var(--content-height);
+  }
+  
+  .content-inner {
+    padding: var(--spacing-3);
+  }
+  
+  .card-content-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+  
+  /* Disabled state */
+  .card-content.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .card-content.disabled .content-header {
+    cursor: not-allowed;
+  }
+  
+  /* Animations */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .content-header {
+      padding: var(--spacing-2);
+    }
+    
+    .content-inner {
+      padding: var(--spacing-2);
+    }
+  }

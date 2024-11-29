@@ -1,0 +1,60 @@
+/* src/components/features/StateView/StateView.css */
+.brain-state-info {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: var(--spacing-1);
+    box-shadow: var(--shadow);
+  }
+  
+  .states-row {
+    display: flex;
+    gap: var(--spacing-3);
+    width: 100%;
+    height: 3.5rem;
+  }
+  
+  .state-indicator {
+    flex: 0 0 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--spacing-3);
+    border-radius: var(--border-radius);
+    color: white;
+    font-weight: 500;
+  }
+  
+  .state-indicator.learning {
+    background-color: var(--color-learning);
+  }
+  
+  .state-indicator.reading {
+    background-color: var(--color-reading);
+  }
+  
+
+  .state-time {
+    font-size: 0.875rem;
+    opacity: 0.9;
+  }
+  
+  .rest-indicator {
+    flex: 0 0 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    color: white;
+    font-weight: 500;
+    min-width: min-content;
+    padding: 0 var(--spacing-3);
+  }
+  
+  .rest-indicator.resting {
+    background-color: var(--color-resting);
+  }
+  
+  .rest-indicator.not-resting {
+    background-color: var(--color-not-resting);
+  }
+    

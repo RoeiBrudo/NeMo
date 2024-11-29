@@ -1,0 +1,209 @@
+/* src/components/features/TimeControl/TimeControl.css */
+.time-control {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-1);
+    padding: var(--spacing-1);
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+  }
+  
+  .control-buttons {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-1);
+  }
+  
+  .control-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: var(--border-radius);
+    background: var(--color-background);
+    color: var(--color-text);
+    cursor: pointer;
+    transition: all var(--transition);
+  }
+  
+  .control-button:hover:not(:disabled) {
+    background: var(--color-primary);
+    color: white;
+  }
+  
+  .control-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .play-button {
+    width: 48px;
+    height: 48px;
+    background: var(--color-primary);
+    color: white;
+  }
+  
+  .play-button:hover {
+    background: var(--color-secondary);
+  }
+  
+  .slider-container {
+    flex: 1;
+    position: relative;
+    width: 100%;
+  }
+  
+  .timeline-wrapper {
+    position: relative;
+    padding: var(--spacing-1) 0;
+  }
+  
+  .timeline-segments {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 24px;
+    transform: translateY(-50%);
+    background: var(--color-background);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .timeline-segment {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    transition: opacity var(--transition);
+    cursor: pointer;
+  }
+  
+  .timeline-segment.learning {
+    background: var(--color-learning-transparent);
+  }
+  
+  .timeline-segment.reading {
+    background: var(--color-reading-transparent);
+  }
+  
+  .timeline-segment.learning:hover {
+    background: var(--color-learning);
+    opacity: 0.4;
+  }
+  
+  .timeline-segment.reading:hover {
+    background: var(--color-reading);
+    opacity: 0.4;
+  }
+      
+  .segment-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  
+  .timeline-markers {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 30px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .marker-tick {
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .time-slider {
+    width: 100%;
+    height: 24px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .time-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: var(--shadow);
+  }
+  
+  .time-slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: var(--shadow);
+  }
+  
+  .time-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: var(--spacing-1);
+  }
+  
+  .time-display {
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+  }
+  
+  .speed-control {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-);
+  }
+  
+  .speed-control label {
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+  }
+  
+  .speed-control select {
+    padding: var(--spacing-1) var(--spacing-1);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    background: white;
+    color: var(--color-text);
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .time-control {
+      flex-direction: column;
+      gap: var(--spacing-2);
+    }
+  
+    .time-info {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--spacing-1);
+    }
+  }
+
+  

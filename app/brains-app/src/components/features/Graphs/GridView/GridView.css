@@ -1,0 +1,84 @@
+/* src/components/features/GridView/GridView.css */
+.grid-view-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-3);
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    max-width: 100%;
+    overflow: auto;
+  }
+  
+  .grid-view {
+    display: grid;
+    gap: 2px;
+    padding: 4px;
+    background: #333;
+    border-radius: 4px;
+    width: fit-content;
+  }
+  
+  .grid-cell {
+    width: 12px;
+    height: 12px;
+    min-width: 12px;
+    min-height: 12px;
+    border-radius: 2px;
+    transition: background-color 0.15s ease;
+  }
+  
+  .grid-cell.valid {
+    background-color: #000;
+  }
+  
+  .grid-cell.valid.active {
+    background-color: #fff;
+    animation: pulse 0.3s ease-in-out;
+  }
+  
+  .grid-cell.invalid {
+    background-color: transparent;
+  }
+  
+  .grid-info {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+  }
+  
+  .grid-size {
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Add responsive styles for different screen sizes */
+  @media (max-width: 768px) {
+    .grid-view-container {
+      padding: var(--spacing-2);
+    }
+  
+    .grid-cell {
+      width: 10px;
+      height: 10px;
+      min-width: 10px;
+      min-height: 10px;
+    }
+  }
